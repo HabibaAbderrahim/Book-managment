@@ -6,6 +6,7 @@ import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
 import java.sql.Blob;
+import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -29,6 +30,7 @@ public class Book {
     private Integer nbPage ;
     private String editor ;
     private String isbn ;
+    private LocalDate dateAdd ;
 
     @OneToMany(cascade = CascadeType.ALL ,mappedBy = "bookId")
     private List<Comment> commentList ;
