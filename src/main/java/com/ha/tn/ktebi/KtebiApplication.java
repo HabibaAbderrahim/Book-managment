@@ -1,7 +1,7 @@
 package com.ha.tn.ktebi;
 
 import com.ha.tn.ktebi.entities.User;
-import com.ha.tn.ktebi.repositories.UserReposirory;
+import com.ha.tn.ktebi.repositories.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
@@ -17,7 +17,7 @@ public class KtebiApplication implements CommandLineRunner {
 	}
 
 	@Autowired
-    private UserReposirory userReposirory ;
+    private UserRepository userRepository;
 	@Override
 	public void run(String... args) throws Exception {
 		User us = new User();
@@ -25,7 +25,7 @@ public class KtebiApplication implements CommandLineRunner {
 		us.setBirthDay(LocalDate.now());
 		us.setName("hedi");
 
-		userReposirory.save(us);
+		userRepository.save(us);
 
 
 	}
