@@ -14,5 +14,5 @@ import javax.persistence.Id;
 public class Type {
 
     @Id
-    private String nameTy ;
+    private String nameType ;
 }

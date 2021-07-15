@@ -14,11 +14,13 @@ public interface BookService {
     public ResponseEntity<Book> getBookByID (Integer bookid) ;
     public ResponseEntity<List<Book>> getBookByCriteria (String criteria) ;
     public ResponseEntity<List<Book>>getBookByCatg (String category) ;
-    public ResponseEntity<List<Book>>getBookByTpype (String type) ;
+    public ResponseEntity<List<Book>>getBookByType (String type) ;
     //TOP 10 2021
     public ResponseEntity<List<Book>> getTopRecentBook ();
     public ResponseEntity<List<Book>> getBookByAuthor (String author);
     public ResponseEntity<List<Book>> getBookByEditor (String editor);
+    //Muliple Recherche
+    public ResponseEntity<List<Book>>getBookByTypeAndCategoryAndTitle (String type , String category , String Title) ;
 
 
 
