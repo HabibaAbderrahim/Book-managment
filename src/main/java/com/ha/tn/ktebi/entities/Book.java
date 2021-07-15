@@ -31,6 +31,7 @@ public class Book {
     private String editor ;
     private String isbn ;
     private LocalDate dateAdd ;
+    private Integer views ;
 
     @OneToMany(cascade = CascadeType.ALL ,mappedBy = "bookId")
     private List<Comment> commentList ;
