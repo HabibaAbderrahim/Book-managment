@@ -1,5 +1,7 @@
 package com.ha.tn.ktebi.entities;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -9,6 +11,7 @@ import java.sql.Blob;
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Properties;
 
 @Data
 @AllArgsConstructor
@@ -36,6 +39,7 @@ public class Book {
     @OneToMany(cascade = CascadeType.ALL ,mappedBy = "bookId")
     private List<Comment> commentList ;
 
+    @JsonIgnoreProperties({"books"})
     @ManyToMany
     @JoinTable( name = "T_Book_Category",
             joinColumns = @JoinColumn( name = "idBook" ),

@@ -16,6 +16,8 @@ import java.util.List;
 public class Category {
 
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Integer id ;
     private String nameCat ;
 
 

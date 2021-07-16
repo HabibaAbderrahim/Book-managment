@@ -9,9 +9,9 @@ import java.time.LocalDate;
 public interface CommentRepository extends JpaRepository<Comment , Integer> {
 
 
-    public Comment findByIdAndMail (Integer idComment , String emailUser) ;
-    boolean existsByMail(String emailUser);
-    boolean existsByMailAndId(String emailUser , Integer idComment);
+    public Comment findByIdAndUserid (Integer idComment , Integer idUser) ;
+    boolean existsByUserid(Integer idUser);
+    boolean existsByUseridAndId(String emailUser , Integer idComment);
     public Comment findByDateCreate(LocalDate dateComment) ;
     boolean existsByDateCreate (LocalDate dateComment);
     //
